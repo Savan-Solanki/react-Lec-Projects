@@ -15,19 +15,19 @@ export default function Form() {
 
   const handleEdit = (i) => {
     setEditIndex(i);
-    setInput(arr[i])
+    setInput(arr[i]);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // setArr([...arr, input]);
     if (editIndex === null) {
-      setArr([...arr, input])
+      setArr([...arr, input]);
     } else {
-      const updatedData = [...arr]
-      updatedData[editIndex] = input
-      setArr(updatedData)
-      setEditIndex(null)
+      const updatedData = [...arr];
+      updatedData[editIndex] = input;
+      setArr(updatedData);
+      setEditIndex(null);
     }
     setInput({
       name: "",
@@ -44,7 +44,6 @@ export default function Form() {
   const handleDelete = (i) => {
     const updatedData = arr.filter((_, index) => i !== index);
     setArr(updatedData);
-    
   };
 
   return (
@@ -69,7 +68,7 @@ export default function Form() {
           {editIndex === null ? "submit" : "Update"}
         </button>
         {
-          // in there used onedit and on delete function used with handal submit button is not used for this method 
+          // in there used onedit and on delete function used with handal submit button is not used for this method
           // editIndex === null ? <button>Submit</button> : <button>Update</button>
         }
       </form>
