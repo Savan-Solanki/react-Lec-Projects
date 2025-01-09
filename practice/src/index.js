@@ -1,8 +1,8 @@
-import React, { StrictMode } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-// import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 // import { store } from "./Component/store";
 import {store} from "./Component/store.js"
@@ -10,15 +10,15 @@ import {store} from "./Component/store.js"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  // <React.StrictMode>
-  //   <BrowserRouter>
-  //   </BrowserRouter>
-  // </React.StrictMode>
-  <StrictMode>
-      <Provider store={store}>
+  <React.StrictMode>
+    <BrowserRouter>
+    <Provider store={store}>
         <App />
       </Provider>
-  </StrictMode>
+    </BrowserRouter>
+  </React.StrictMode>
+  // <StrictMode>
+  // </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
